@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+backend/.venv/
+.venv/
+venv/
+
+# Environment Variables
+backend/.env
+.env
+
+# Uploads
+backend/uploads/
+backend/extracted_text/
+backend/vector_store/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
