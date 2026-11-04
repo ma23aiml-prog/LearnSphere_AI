@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Login from "./Login";
 
-const API = "http://127.0.0.1:5000";
+const API = "https://learnsphere-ai-qzkh.onrender.com";
 
 function Toast({ toasts }) {
   return (
