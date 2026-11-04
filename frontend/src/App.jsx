@@ -1342,6 +1342,7 @@ function App() {
                     <button className="edit-name-btn" onClick={() => { setNameInput(displayName); setEditingName(true); }}>✎ Edit</button>
                   </div>
                 )}
+              </div>
             </div>
 
             <button className="logout-large-btn" onClick={handleLogout}>
@@ -1349,6 +1350,7 @@ function App() {
             </button>
           </section>
         )}
+
       </main>
     </div>
   );
