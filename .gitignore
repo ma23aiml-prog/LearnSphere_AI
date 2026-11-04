@@ -1,25 +1,27 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
-*.pyd
-
-# Virtual Environment
 backend/.venv/
-.venv/
-venv/
+backend/venv/
+backend/env/
 
-# Environment Variables
+# Secrets - NEVER commit these
 backend/.env
-.env
+frontend/.env
 
-# Uploads
+# Uploads & vector store (large binary data)
 backend/uploads/
-backend/extracted_text/
 backend/vector_store/
+backend/chroma_db/
 
-# VS Code
-.vscode/
+# Test scripts
+backend/test_*.py
+backend/*.pdf
+
+# Node
+frontend/node_modules/
+frontend/dist/
 
 # OS
 .DS_Store

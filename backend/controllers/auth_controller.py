@@ -7,6 +7,12 @@ def register():
 
     data = request.get_json()
 
+    if not data:
+        return jsonify({
+            "success": False,
+            "message": "No JSON body received"
+        }), 400
+
     valid, message = validate_registration(data)
 
     if not valid:
@@ -18,10 +24,12 @@ def register():
     success, message = AuthService.register_user(data)
 
     if not success:
+        # Distinguish server-side DB errors from user errors
+        status_code = 500 if "Database" in message or "database" in message else 400
         return jsonify({
             "success": False,
             "message": message
-        }), 400
+        }), status_code
 
     return jsonify({
         "success": True,

@@ -10,3 +10,8 @@ class UserModel:
     @staticmethod
     def create_user(user_data):
         return users_collection.insert_one(user_data)
+
+    @staticmethod
+    def get_profile(email):
+        user = users_collection.find_one({"email": email}, {"_id": 0, "password": 0})
+        return user
